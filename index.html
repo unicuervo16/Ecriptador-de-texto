@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <div>
+        <img src="img/Incognito.png" alt="">
+        <h1>Encriptador de Texto</h1>
+    </div>
+    <button class="new" onclick="rec()">Nuevo Cifrado <br> ⬇</button>
+    <div class="div1">
+        <button onclick="encriptado()" class="cif">Encriptar ▶</button><input type="text" id="text1" class="input"
+            placeholder="Ingrese el texto a cifrar. . ."><button id="desenc" onclick="desEncriptado()" class="des">◀
+            Desencriptar</button>
+    </div>
+    <p id="result" class="resultado"></p> <button onclick="copiar()" id="copiar" class="copiar">Copiar</button>
+    <div class="clase-p">
+    <p id="pe" class="pe"></p>
+    </div>
+   
+
+    <script>
+        function desEncriptado(texto) {
+            let input1 = document.getElementById("text1").value.toLowerCase();
+            let cifrado1 = input1.replace(/ap1a/img, "a");
+            let cifrado2 = cifrado1.replace(/ep2e/img, "e");
+            let cifrado3 = cifrado2.replace(/ip3i/img, "i");
+            let cifrado4 = cifrado3.replace(/op4o/img, "o");
+            let cifrado5 = cifrado4.replace(/up5u/img, "u");
+            document.getElementById("result").innerHTML = "El resultado de tu desencriptado es: ";
+            document.getElementById("pe").innerHTML = cifrado5;
+        }
+        function encriptado() {
+            let input1 = document.getElementById("text1").value.toLowerCase();
+            let cifrado1 = input1.replace(/a/img, "ap1a");
+            let cifrado2 = cifrado1.replace(/e/img, "ep2e");
+            let cifrado3 = cifrado2.replace(/i/img, "ip3i");
+            let cifrado4 = cifrado3.replace(/o/img, "op4o");
+            let cifrado5 = cifrado4.replace(/u/img, "up5u");
+            document.getElementById("result").innerHTML = "El resultado de tu encriptado es: ";
+            document.getElementById("pe").innerHTML = cifrado5;
+            document.getElementById("pe").style.Color = "green";
+            document.getElementById("copiar").style.display ="show";
+            document.getElementById("copiar").style.display ="inherit";
+        }
+        function rec() {
+            location.reload();
+        }   
+        function copiar() {
+            let tempInput = document.createElement ("input"); 
+            tempInput.value = document.getElementById ("pe"). innerHTML; 
+            document.body.appendChild (tempInput); 
+            tempInput.select (); 
+            document.execCommand ("copy"); 
+            document.body.removeChild (tempInput); 
+            alert("valor copiado"); 
+        }
+
+    </script>
+</body>
+
+</html>
