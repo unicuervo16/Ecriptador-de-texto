@@ -29,21 +29,21 @@
     <script>
         function desEncriptado(texto) {
             let input1 = document.getElementById("text1").value.toLowerCase();
-            let cifrado1 = input1.replace(/ap1a/img, "a");
-            let cifrado2 = cifrado1.replace(/ep2e/img, "e");
-            let cifrado3 = cifrado2.replace(/ip3i/img, "i");
-            let cifrado4 = cifrado3.replace(/op4o/img, "o");
-            let cifrado5 = cifrado4.replace(/up5u/img, "u");
+            let cifrado1 = input1.replace(/enter/img, "e");
+            let cifrado2 = cifrado1.replace(/imes/img, "i");
+            let cifrado3 = cifrado2.replace(/ai/img, "a");
+            let cifrado4 = cifrado3.replace(/ober/img, "o");
+            let cifrado5 = cifrado4.replace(/ufat/img, "u");
             document.getElementById("result").innerHTML = "El resultado de tu desencriptado es: ";
             document.getElementById("pe").innerHTML = cifrado5;
         }
         function encriptado() {
             let input1 = document.getElementById("text1").value.toLowerCase();
-            let cifrado1 = input1.replace(/a/img, "ap1a");
-            let cifrado2 = cifrado1.replace(/e/img, "ep2e");
-            let cifrado3 = cifrado2.replace(/i/img, "ip3i");
-            let cifrado4 = cifrado3.replace(/o/img, "op4o");
-            let cifrado5 = cifrado4.replace(/u/img, "up5u");
+            let cifrado1 = input1.replace(/e/img, "enter");
+            let cifrado2 = cifrado1.replace(/i/img, "imes");
+            let cifrado3 = cifrado2.replace(/a/img, "ai");
+            let cifrado4 = cifrado3.replace(/o/img, "ober");
+            let cifrado5 = cifrado4.replace(/u/img, "ufat");
             document.getElementById("result").innerHTML = "El resultado de tu encriptado es: ";
             document.getElementById("pe").innerHTML = cifrado5;
             document.getElementById("pe").style.Color = "green";
